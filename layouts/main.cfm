@@ -17,16 +17,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="index.cfm">All Posts</a>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="createQuestion.cfm">New Post</a>
                     </li>
                     <li>
-                        <a href="blog.html">Blog</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="blog.html">My Posts</a>
                     </li>
                 </ul>
             </div>
@@ -34,5 +31,5 @@
         </div>
         <!-- /.container -->
     </nav>
-
+    #body#
 </cfoutput>
