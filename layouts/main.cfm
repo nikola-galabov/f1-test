@@ -11,19 +11,19 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-                <a class="navbar-brand" href="index.html">Business Casual</a>
+                <a class="navbar-brand" href="index.html">13 bik</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.cfm">All Posts</a>
+                        <a href="index.cfm">All Questions</a>
                     </li>
                     <li>
-                        <a href="createQuestion.cfm">New Post</a>
+                        <a href="#buildURL('main.new')#">New Question</a>
                     </li>
                     <li>
-                        <a href="blog.html">My Posts</a>
+                        <a href="#buildURL('main.default')#">My Questions</a>
                     </li>
                 </ul>
             </div>

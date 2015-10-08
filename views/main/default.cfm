@@ -1,5 +1,6 @@
 <cfoutput>
 	<!--- container --->
+    <!--- <cfdump var="#rc#" abort="true" /> --->
 	<div class="container">
         <cfloop query="#rc.qQuestions#">
             <div class="row">
