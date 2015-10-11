@@ -1,10 +1,29 @@
 <cfcomponent>
 	<cffunction access="public" name="getAll">
+		<cfargument name="userID" default="">
+
 		<cfquery name="qQuestions" datasource="ForumSystem">
-			SELECT * FROM `Questions`;
+			SELECT * FROM `Questions`
+			JOIN `Users` ON `usr_id` = `que_userId`
+			<cfif ARGUMENTS.userID NEQ "">
+				WHERE `que_userID` = <cfqueryparam cfsqltype="cf_sql_int" value="#ARGUMENTS.userID#">
+			</cfif>
+			ORDER BY `QUE_CREATEDAT` DESC;
 		</cfquery>
 
 		<cfreturn qQuestions>
+	</cffunction>
+
+	<cffunction access="public" name="getQuestion">
+		<cfargument name="questionId" required="true">
+
+		<cfquery name="qQuestion" datasource="ForumSystem">
+			SELECT * FROM `Questions`
+			JOIN `Users` ON `usr_id` = `que_userId`
+				WHERE `que_ID` = <cfqueryparam cfsqltype="cf_sql_int" value="#ARGUMENTS.questionId#">
+		</cfquery>
+
+		<cfreturn qQuestion>
 	</cffunction>
 
 	<cffunction name="create">

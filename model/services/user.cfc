@@ -13,12 +13,20 @@
 			)
 		</cfquery>
 
-		<cfreturn userId>
+		<cfreturn userId.GENERATEDKEY>
 	</cffunction>
 
-	<cffunction name="getAll">
+	<cffunction name="get">
+		<cfargument name="username" default="">
+
 		<cfquery name="qUsers" datasource="ForumSystem">
-			SELECT * FROM `Users`
+			SELECT 
+				* 
+			FROM 
+				`Users`
+			<cfif ARGUMENTS.username NEQ "">
+				WHERE `usr_Username` = <cfqueryparam cfsqltype="cf_sql_varchar" value="#ARGUMENTS.username#">
+			</cfif>
 		</cfquery>
 
 		<cfreturn qUsers>

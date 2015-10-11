@@ -10,7 +10,7 @@
 	    <meta name="description" content="">
 	    <meta name="author" content="">
 
-	    <title>Business Casual - Start Bootstrap Theme</title>
+	    <title>Forum System - 13 bik</title>
 
 	    <!-- Bootstrap Core CSS -->
 	    <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -33,12 +33,12 @@
 
 	<body>
 		<div class="brand">Forum system</div>
-		#body#
+			#body#
 		<footer>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <p>Copyright &copy; Your Website 2014</p>
+                        <p>Copyright &copy; 13 bik - Forum System 2015</p>
                     </div>
                 </div>
             </div>

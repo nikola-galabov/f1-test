@@ -1,5 +1,5 @@
 <cfoutput>
-
+	<!--- container --->
 	<div class="container">
 		<form class="box" method="post" action="#buildURL('main.create')#">
 			<legend>
@@ -19,5 +19,4 @@
 			<button class="btn btn-default">Create</button>
 		</form>
 	</div>
-
 </cfoutput>
