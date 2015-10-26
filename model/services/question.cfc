@@ -29,6 +29,7 @@
 	<cffunction name="create">
 		<cfargument name="text" type="string" required="true">
 		<cfargument name="title" type="string" required="true">
+		<cfargument name="userId" type="number" required="true">
 
 		<cfquery result="questionId" datasource="ForumSystem">
 			INSERT INTO `Questions`
@@ -43,7 +44,7 @@
 				#now()#,
 				<cfqueryparam cfsqltype="cf_sql_varchar" value="#ARGUMENTS.text#">,
 				<cfqueryparam cfsqltype="cf_sql_varchar" value="#ARGUMENTS.title#">,
-				1
+				<cfqueryparam cfsqltype="cf_sql_varchar" value="#ARGUMENTS.userId#">,
 			)
 		</cfquery>
 
